@@ -1,109 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>I'm Sorry Jasleen Babyy ❤️</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #ff758c, #ff7eb3);
-      font-family: 'Segoe UI', sans-serif;
-      overflow: hidden;
-    }
+<meta charset="UTF-8">
+<title>For Jasleen ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      text-align: center;
-      max-width: 350px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-      animation: pop 1s ease;
-    }
-
-    @keyframes pop {
-      from { transform: scale(0.7); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    h1 {
-      color: #ff4d6d;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #444;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 30px;
-      background: #ff4d6d;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #ff1e4d;
-      transform: scale(1.05);
-    }
-
-    .heart {
-      position: absolute;
-      color: rgba(255,255,255,0.7);
-      font-size: 20px;
-      animation: float 6s linear infinite;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(100vh); opacity: 0; }
-      20% { opacity: 1; }
-      100% { transform: translateY(-10vh); opacity: 0; }
-    }
-  </style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  overflow:hidden;
+  color:#fff;
+}
+.slide{
+  display:none;
+  height:100vh;
+  padding:40px 20px;
+  text-align:center;
+  animation:fade 0.9s ease;
+}
+.slide.active{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+@keyframes fade{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+h1{font-size:36px;margin-bottom:15px;}
+p{
+  font-size:18px;
+  max-width:460px;
+  line-height:1.6;
+}
+button{
+  margin-top:28px;
+  padding:12px 28px;
+  border:none;
+  border-radius:30px;
+  background:#fff;
+  color:#ff4d6d;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+button:hover{transform:scale(1.08);}
+.controls{
+  position:fixed;
+  top:15px;
+  right:15px;
+}
+.music{
+  background:rgba(255,255,255,0.2);
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.5);
+}
+.heart{
+  position:absolute;
+  animation:float 6s linear infinite;
+  opacity:0.8;
+}
+@keyframes float{
+  0%{transform:translateY(100vh);opacity:0;}
+  20%{opacity:1;}
+  100%{transform:translateY(-10vh);opacity:0;}
+}
+.typing{
+  border-right:2px solid #fff;
+  padding-right:4px;
+  white-space:nowrap;
+  overflow:hidden;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="card">
-    <h1>I'm Sorry ❤️</h1>
-    <p>
-      Mujhse galti ho gayi aur mujhe uska bahut afsos hai.  
-      Tum mere liye bahut important ho babby. 
-      Please Jasleen babyy mujhe maaf kar do 🥺
+<!-- Music Control -->
+<div class="controls">
+  <button class="music" onclick="toggleMusic()">🎵 Play song</button>
+</div>
+
+<audio id="song" loop>
+  <!-- Free soft romantic instrumental (safe) -->
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2cfd6b7a4f.mp3?filename=romantic-piano-112199.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SLIDE 1 -->
+<div class="slide active">
+  <h1>Hey Jasleen ❤️</h1>
+  <p class="typing" id="type1"></p>
+  <button onclick="nextSlide()">Next</button>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide">
+  <h1>Small Thing</h1>
+  <p>
+    Babyyyy, mujhe pata hai tum thoda gussa ho.  
+    Aur honestly, wo normal hai.  
+    Kabhi-kabhi aisa ho jata hai 🙂
+  </p>
+  <button onclick="nextSlide()">Next</button>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide">
+  <h1>Clear Baat</h1>
+  <p>
+    Main koi drama create nahi karna chahta.  
+    Bas itna bolna hai —  
+    **tum important ho**, simple as that.
+  </p>
+  <button onclick="nextSlide()">Next</button>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide">
+  <h1>Jasleen 🌸</h1>
+  <p>
+    Tumhari narazgi mujhe samajh aati hai,  
+    par tumhari presence mujhe aur zyada important lagti hai.  
+    Babyyyy, thoda time lo… main yahin hoon.
+  </p>
+  <button onclick="nextSlide()">Next</button>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide">
+  <h1>No Pressure</h1>
+  <p>
+    Ye website koi pressure nahi hai.  
+    Bas ek reminder hai ki  
+    **pyaar wahi ka wahi hai**, gussa temporary hai ❤️
+  </p>
+  <button onclick="nextSlide()">Last</button>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide">
+  <h1>End Note 💗</h1>
+  <p>
+    Jab ready feel ho, bas ek smile de dena 😊  
+    Baaki sab apne aap sahi ho jata hai, Jasleen.
+  </p>
+  <button onclick="end()">🙂</button>
+</div>
+
+<script>
+let current=0;
+const slides=document.querySelectorAll('.slide');
+function nextSlide(){
+  slides[current].classList.remove('active');
+  current++;
+  if(current<slides.length){
+    slides[current].classList.add('active');
+  }
+}
+function end(){
+  document.body.innerHTML=`
+  <div style="
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    color:white;
+    text-align:center;
+    padding:20px;">
+    <h1>Always here 🤍</h1>
+    <p style="max-width:420px;font-size:18px;">
+      No rush. No force.  
+      Bas normal sa pyaar… jaise hamesha tha 🙂
     </p>
-    <button onclick="forgive()">Maaf kar do babyy? 💖</button>
-  </div>
+  </div>`;
+}
+function toggleMusic(){
+  const s=document.getElementById('song');
+  if(s.paused){s.play();}else{s.pause();}
+}
+setInterval(()=>{
+  const h=document.createElement('div');
+  h.className='heart';
+  h.innerHTML='❤️';
+  h.style.left=Math.random()*100+'vw';
+  h.style.fontSize=(Math.random()*18+14)+'px';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+},350);
 
-  <script>
-    function forgive() {
-      alert("Thank you ❤️ Tumhari smile hi sab kuch hai Jasleen 😊");
-    }
-
-    // Hearts animation
-    setInterval(() => {
-      const heart = document.createElement("div");
-      heart.className = "heart";
-      heart.innerHTML = "❤️";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.fontSize = (Math.random() * 20 + 15) + "px";
-      document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 6000);
-    }, 300);
-  </script>
+// typing text
+const text="Babyyyy… bas thoda sa sun lo 💗";
+let i=0;
+setInterval(()=>{
+  if(i<text.length){
+    document.getElementById('type1').innerHTML+=text.charAt(i);
+    i++;
+  }
+},80);
+</script>
 
 </body>
 </html>

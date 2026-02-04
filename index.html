@@ -2,54 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Jasleen ❤️</title>
+<title>For Jasleen 💖</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
-body{
-  background:black;
-  overflow:hidden;
-  color:white;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
 }
 
-/* Background video */
-video.bg{
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  object-fit:cover;
-  z-index:-2;
 body{
-  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  color:#333;
+  height:100vh;
   overflow:hidden;
-  color:white;
 }
-  
 
 .slide{
   display:none;
   height:100vh;
-  padding:40px 20px;
+  padding:30px 20px;
   text-align:center;
-  animation:fade 1s ease;
 }
+
 .slide.active{
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  animation:fade 0.6s ease;
 }
 
 @keyframes fade{
-  from{opacity:0;transform:translateY(30px);}
+  from{opacity:0;transform:translateY(20px);}
   to{opacity:1;transform:translateY(0);}
 }
 
 h1{
   font-size:36px;
-  margin-bottom:18px;
+  margin-bottom:15px;
 }
+
 p{
   font-size:18px;
   max-width:480px;
@@ -59,32 +54,24 @@ p{
 button{
   margin-top:30px;
   padding:12px 30px;
-  border:none;
-  border-radius:30px;
-  background:#ff4d6d;
-  color:white;
   font-size:16px;
+  border:none;
+  border-radius:25px;
+  background:#ff5c8a;
+  color:white;
   cursor:pointer;
-  transition:0.3s;
-}
-button:hover{transform:scale(1.08);}
-
-.controls{
-  position:fixed;
-  top:15px;
-  right:15px;
-}
-.controls button{
-  background:rgba(255,255,255,0.2);
-  border:1px solid rgba(255,255,255,0.4);
 }
 
-/* hearts */
+button:hover{
+  background:#ff3f78;
+}
+
 .heart{
   position:absolute;
-  animation:float 6s linear infinite;
-  opacity:0.8;
+  font-size:20px;
+  animation:float 5s linear infinite;
 }
+
 @keyframes float{
   0%{transform:translateY(100vh);opacity:0;}
   20%{opacity:1;}
@@ -95,88 +82,60 @@ button:hover{transform:scale(1.08);}
 
 <body>
 
-<!-- Background video (romantic aesthetic, safe & free) -->
-<video class="bg" autoplay muted loop playsinline>
-  <source src="https://cdn.pixabay.com/video/2023/03/28/156030-812773099_large.mp4" type="video/mp4">
-</video>
-<div class="overlay"></div>
-
-<!-- Music -->
-<audio id="song" loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2cfd6b7a4f.mp3?filename=romantic-piano-112199.mp3" type="audio/mpeg">
-</audio>
-
-<div class="controls">
-  <button onclick="toggleMusic()">🎵 Play song</button>
-</div>
-
 <!-- SLIDE 1 -->
 <div class="slide active">
   <h1>Jasleen ❤️</h1>
   <p>
     Babbyyyy 🥺💔  
-    Please thoda sa sun lo…
+    please thoda sa sun lo…
   </p>
-  <button onclick="nextSlide()">Next ➡️</button>
+  <button onclick="next()">Next ➡️</button>
 </div>
 
-<!-- SLIDE 2 (YOUR EXACT TEXT) -->
+<!-- SLIDE 2 -->
 <div class="slide">
-  <h1>I'm Sorry 😔</h1>
+  <h1>Sorry 😔</h1>
   <p>
     Jasleen babbyyyy soo soorryy 😢  
     mujhe pata mene bahut badhi galti ki hai  
     aapse jhut bolaa hai 💔  
     mujhe nai bolna chahiyee thaaa  
-    Please babbyy mujhr maaf kardo 🙏🥺
+    please babbyy mujhr maaf kardo 🙏🥺
   </p>
-  <button onclick="nextSlide()">Next ➡️</button>
+  <button onclick="next()">Next ➡️</button>
 </div>
 
-<!-- SLIDE 3 (YOUR EXACT TEXT CONTINUED) -->
+<!-- SLIDE 3 -->
 <div class="slide">
   <h1>Promise 🤞</h1>
   <p>
     Next time mai aapse koi jhut nai bolunga babbyyyy 🤍  
-    Promise 🤞  
+    promise 🤞  
     mujhe sachi bilkul achaa nai lag raha babbyyy 😞  
     ab esha dobara nai ho ga sachii..!
   </p>
-  <button onclick="nextSlide()">Next ➡️</button>
+  <button onclick="next()">Next ➡️</button>
 </div>
 
 <!-- SLIDE 4 -->
 <div class="slide">
-  <h1>Normal Dil Se 💗</h1>
+  <h1>Bas ek baat 🌸</h1>
   <p>
-    Main babby ye sab karke aapko dukh nai dena chahata tha🥹
-    Bas sach bol raha hoon.  
-    Tum important ho… aur rahogi ❤️ I love you 🥹💓❤️
-  </p>
-  <button onclick="nextSlide()">Next ➡️</button>
-</div>
-
-<!-- SLIDE 5 -->
-<div class="slide">
-  <h1>End Note 🌸</h1>
-  <p>
-    Aapka gussa hona banta aur mujhe regret ho raha hai meri Galti ka …  
-    Par babyy aapse pyaar bahut jada hai  ❤️❤️🥹
-    Babbyyyy, please mujhe maar kar do meri rasmalai ❤️🥹
+    Gussa thoda time ke liye hota hai…  
+    par care aur feelings wahi rehti hain 💗  
+    jab mann ho, bas ek smile 😊
   </p>
   <button onclick="end()">🙂</button>
 </div>
 
 <script>
-let current=0;
+let i=0;
 const slides=document.querySelectorAll('.slide');
 
-function nextSlide(){
-  slides[current].classList.remove('active');
-  current++;
-  if(current<slides.length){
-    slides[current].classList.add('active');
-  }
+function next(){
+  slides[i].classList.remove('active');
+  i++;
+  slides[i].classList.add('active');
 }
 
 function end(){
@@ -187,33 +146,26 @@ function end(){
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#ff758c,#ff7eb3);
-    color:white;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
     text-align:center;
     padding:20px;">
-    <h1>Always Yours 🤍</h1>
-    <p style="max-width:450px;font-size:18px;">
-      No lies. No repeat.  
-      Sirf honesty aur care… Jasleen 🌸
+    <h1>Always here 🤍</h1>
+    <p style="font-size:18px;max-width:420px;">
+      No jhoot. No repeat.  
+      Bas honesty aur care, Jasleen 🌷
     </p>
   </div>`;
 }
 
-function toggleMusic(){
-  const s=document.getElementById('song');
-  if(s.paused){s.play();}else{s.pause();}
-}
-
-// hearts
+// floating hearts
 setInterval(()=>{
   const h=document.createElement('div');
   h.className='heart';
   h.innerHTML='❤️';
   h.style.left=Math.random()*100+'vw';
-  h.style.fontSize=(Math.random()*18+14)+'px';
   document.body.appendChild(h);
-  setTimeout(()=>h.remove(),6000);
-},350);
+  setTimeout(()=>h.remove(),5000);
+},400);
 </script>
 
 </body>
